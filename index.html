@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy New Year, My Love!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial, sans-serif';
+      background: url('97c237dbe11c793827d8f033bd6f7075.jpg') center center / cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: pink;
+    }
+
+    h1, h2 {
+      margin: 10px 0;
+    }
+
+    #countdown {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+
+    #gallery {
+      margin: 20px 0;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%; /* Full width to adapt to screen */
+      max-width: 90%; /* Keep within a readable size on larger screens */
+      height: auto; /* Adjust height based on the content */
+      margin: 0 auto 20px;
+      aspect-ratio: 16 / 9; /* Maintain a proper landscape ratio */
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f0f0f0; /* Fallback color in case images are slow to load */
+    }
+
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Ensures full display of the image without cropping */
+      transition: opacity 1s ease;
+      opacity: 0;
+    }
+
+    .carousel img.active {
+      opacity: 1; /* The active image is fully visible */
+    }
+
+
+
+    .controls {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #ff577f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff3e61;
+    }
+
+    #musicButton {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #00c0a3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #musicButton:hover {
+      background-color: #008f80;
+    }
+
+    #videoPopup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #videoPopup video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 999;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5em;
+      }
+
+      button {
+        font-size: 0.9em;
+      }
+
+      .carousel {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy New Year, Mahal k🎆💝o</h1>
+  <h2>A Blessed 2025 po dyaan sa LoveLove ko po, I have a message for you💌.</h2>
+  <div id="countdown"></div>
+  <br>
+  <h2>Baka ma bored ikaw mag wait,
+    <br>So eto po balikan nyan ang
+    <br>mga moments natin from March to November👀
+  </h2>
+  <div id="gallery">
+    <div class="carousel" id="month1-carousel">
+      <img src="March/_DSC8451.JPG" class="active" alt="March Photo 1">
+      <img src="March/_DSC8452.JPG" alt="Marcg Photo 2">
+      <img src="March/_DSC8454.JPG" alt="March Photo 3">
+      <img src="March/_DSC8455.JPG" alt="March Photo 4">
+      <img src="March/_DSC8470.JPG" alt="March Photo 5">
+      <img src="March/_DSC8674.JPG" alt="March Photo 6">
+      <img src="March/_DSC8948.JPG" alt="March Photo 7">
+      <img src="March/Messenger_creation_140d52ca-86ff-4d3b-a44d-42cfd7174562.jpeg" alt="March Photo 8">
+      <img src="March/Messenger_creation_4bd8f9a2-3283-40ea-9e7e-10e820d96363.jpeg" alt="March Photo 9">
+      <img src="March/Messenger_creation_7995a894-0ea0-417d-8bed-e7008d12c704.jpeg" alt="March Photo 10">
+    </div>
+    <div class="carousel" id="month2-carousel" style="display: none;">
+      <img src="April/Messenger_creation_31973aec-8211-44ff-9918-9a6e3344ac08.jpeg" class="active" alt="April Photo 1">
+      <img src="April/Messenger_creation_3a1c1a33-62c4-4980-9224-5fe0b5dde330.jpeg" alt="April Photo 2">
+      <img src="April/Messenger_creation_7e9c3247-38ee-4db0-8ec3-63fff7dc9b4a.jpeg" alt="April Photo 3">
+      <img src="April/Messenger_creation_a68fc156-5cb0-4555-9d7b-0fe83b666358.jpeg" alt="April Photo 4">
+      <img src="April/Messenger_creation_ec6d2a37-45c4-4abb-b06d-ec626cd17314.jpeg" alt="April Photo 5">
+      <img src="April/Messenger_creation_fed1a5d3-5381-44e9-9bf7-c928df71c1cc.jpeg" alt="April Photo 6">
+    </div>
+    <div class="carousel" id="month3-carousel" style="display: none;">
+      <img src="May/Messenger_creation_a0451a4f-0aa2-4c01-ad17-7f71cfe74012.jpeg" class="active" alt="May Photo 1">
+      <img src="May/Messenger_creation_a96d1d9e-212f-4e71-b71f-fc141dff5cdd.jpeg" alt="May Photo 2">     
+      <img src="May/Messenger_creation_c23838c4-2c9f-4040-aa77-9cc1fc230a04.jpeg" alt="May Photo 3">
+      <img src="May/IMG_20240504_124805_085.jpg" alt="May Photo 2">
+      <img src="May/IMG_20240504_124830_163.jpg" alt="May Photo 2">
+    </div>
+    <div class="carousel" id="month4-carousel" style="display: none;">
+      <img src="Jun/IMG_20240614_144127_471.jpg" class="active" alt="June Photo 1">
+      <img src="Jun/IMG_20240614_144310_837.jpg" alt="June Photo 2">
+      <img src="Jun/IMG_20240614_144517_725.jpg" alt="June Photo 3">
+      <img src="Jun/IMG_20240614_144747_010.jpg" alt="June Photo 3">
+      <img src="Jun/Messenger_creation_ef20a637-8410-44f2-9f39-d9bd05f25e2f.jpeg" alt="June Photo 3">
+    </div>
+    <div class="carousel" id="month5-carousel" style="display: none;">
+      <img src="July/IMG_20240724_104321_240.jpg" class="active" alt="July Photo 1">
+      <img src="July/IMG_20240724_104341_763.jpg" alt="July Photo 2">
+      <img src="July/IMG_20240724_104348_835.jpg" alt="July Photo 3">
+      <img src="July/Messenger_creation_0ae2f9b1-a367-4d10-a4f5-6d497676d851.jpg" alt="July Photo 4">
+      <img src="July/Messenger_creation_35522913-ff11-43a7-8108-42f970b926e0_1.jpg" alt="July Photo 5">
+      <img src="July/Messenger_creation_0f887210-be4f-484d-803a-e6543ca4a8f3_1.jpg" alt="July Photo 6">
+      <img src="July/Messenger_creation_cb8eeda6-a4cd-4dcd-a641-69c6e7919c26.jpg" alt="July Photo 7">
+      <img src="July/Messenger_creation_cd5122a7-6758-4d4d-b086-a9df94b22af8.jpg" alt="July Photo 8">
+      <img src="July/Messenger_creation_a582d39a-6cc8-4b05-bbdc-669abdae47fb_1.jpg" alt="July Photo 9">
+    </div>
+    <div class="carousel" id="month6-carousel" style="display: none;">
+      <img src="Aug/Messenger_creation_0e54f573-acf4-4c1f-bc2a-13477b50e075.jpeg" class="active" alt="August Photo 1">
+      <img src="Aug/Messenger_creation_aa2632c6-f4c1-484c-8d7a-a0b40527f036.jpeg" alt="August Photo 2">
+    </div>
+    <div class="carousel" id="month7-carousel" style="display: none;">
+      <img src="Sep/image_2.jpg" class="active" alt="Septmeber Photo 1">
+      <img src="Sep/image_3.jpg" alt="September Photo 2">
+      <img src="Sep/image_4.jpg" alt="September Photo 3">
+      <img src="Sep/image_5.jpg" alt="September Photo 4">
+      <img src="Sep/IMG_20240918_160211_205.jpg" alt="September Photo 5">
+      <img src="Sep/Messenger_creation_09EB167C-E14B-47F4-A27E-5992989DF640.jpg" alt="September Photo 6">
+      <img src="Sep/Messenger_creation_1972EEB2-9A43-40BB-AD59-68A55F86958A.jpg" alt="September Photo 7">
+      <img src="Sep/Messenger_creation_5142EEA3-2817-439B-97B1-461D4D5CA45E_1.jpg" alt="September Photo 8">
+      <img src="Sep/Messenger_creation_98865E50-4448-4670-9E59-0ECBBC251708_1.jpg" alt="September Photo 9">
+      <img src="Sep/Messenger_creation_B412D9BE-A483-4615-83E1-A7E9A8A40226.jpg" alt="September Photo 10">
+      <img src="Sep/Messenger_creation_F4C3C37A-0F1F-4E90-A582-F6D6CE8AA99D.jpg" alt="September Photo 11">
+      <img src="Sep/IMG_20240918_160253_721.jpg" alt="September Photo 12">
+    </div>
+    <div class="carousel" id="month8-carousel" style="display: none;">
+      <img src="Oct/IMG_20241009_164003_417.jpg" class="active" alt="October Photo 1">
+      <img src="Oct/IMG_20241009_164017_054.jpg" alt="October Photo 2">
+      <img src="Oct/IMG_20241009_164021_807.jpg" alt="October Photo 3">
+      <img src="Oct/IMG_20241009_164035_227.jpg" alt="October Photo 4">
+      <img src="Oct/IMG_20241009_164035_227.jpg" alt="October Photo 5">
+      <img src="Oct/IMG_20241009_164054_029.jpg" alt="October Photo 6">
+      <img src="Oct/IMG_20241009_172859_284.jpg" alt="October Photo 7">
+      <img src="Oct/IMG_20241009_172924_247.jpg" alt="October Photo 8">
+      <img src="Oct/IMG_20241009_173111_062.jpg" alt="October Photo 9">
+      <img src="Oct/IMG_20241009_173128_493.jpg" alt="October Photo 10">
+      <img src="Oct/IMG_20241009_173137_573.jpg" alt="October Photo 11">
+      <img src="Oct/Messenger_creation_07C71845-99CC-4322-9286-F012A4032D86.jpeg" alt="October Photo 12">
+      <img src="Oct/Messenger_creation_2D7D100A-FFC9-4414-B924-48041015996A.jpeg" alt="October Photo 13">
+      <img src="Oct/Messenger_creation_2F9A90E9-4457-417E-80DB-6EA3AC627E8D.jpeg" alt="October Photo 14">
+      <img src="Oct/Messenger_creation_577000F2-A726-451F-BBC0-D50803472AF7.jpeg" alt="October Photo 15">
+      <img src="Oct/Messenger_creation_F2E01134-4FCC-4C70-9F2E-9BB2EF512E44.jpeg" alt="October Photo 16">
+      <img src="Oct/Untitled75_20241208005226.png1" alt="October Photo 17">
+    </div>
+    <div class="carousel" id="month9-carousel" style="display: none;">
+      <img src="Nov/IMG_20241104_155827_954.jpg" class="active" alt="November Photo 1">
+      <img src="Nov/IMG_20241104_155838_359.jpg" alt="November Photo 2">
+      <img src="Nov/IMG_20241104_155842_260.jpg" alt="November Photo 3">
+      <img src="Nov/IMG_20241104_160627_092.jpg" alt="November Photo 4">
+      <img src="Nov/IMG_20241108_162334_741.jpg" alt="November Photo 5">
+      <img src="Nov/IMG_20241108_162339_042.jpg" alt="November Photo 6">
+      <img src="Nov/IMG_20241108_162401_840.jpg" alt="November Photo 7">
+      <img src="Nov/Messenger_creation_178BF619-2C52-4DAB-BA0F-0CC794026A29.jpeg" alt="November Photo 8">
+      <img src="Nov/Messenger_creation_54A9D52C-3511-41E2-B694-C9EF16146FB3.jpeg" alt="November Photo 9">
+    </div>
+    
+    <div class="controls">
+      <button onclick="prevMonth()">Previous Month</button>
+      <button onclick="nextMonth()">Next Month</button>
+    </div>
+  </div>
+
+  <button id="musicButton">Pause Music</button>
+
+  <div id="overlay"></div>
+  <div id="videoPopup">
+    <video controls>
+      <source src="VID20241231034949.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <audio id="backgroundMusic" autoplay loop>
+    <source src="PALAGI_-_TJxKZ___LIVE_SESSIONS(256k).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Music Play/Pause Button
+    const musicButton = document.getElementById('musicButton');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+
+    musicButton.addEventListener('click', () => {
+      if (backgroundMusic.paused) {
+        backgroundMusic.play();
+        musicButton.textContent = 'Pause Music';
+      } else {
+        backgroundMusic.pause();
+        musicButton.textContent = 'Play Music';
+      }
+    });
+
+    // Countdown Timer
+    const countdownElement = document.getElementById('countdown');
+    const videoPopup = document.getElementById('videoPopup');
+    const overlay = document.getElementById('overlay');
+    const newYear = new Date('Jan 1, 2025 00:00:00').getTime();
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = newYear - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        countdownElement.textContent = 'Happy New Year!';
+        overlay.style.display = 'block';
+        videoPopup.style.display = 'block';
+      }
+    }, 1000);
+
+    // Gallery Navigation and Carousel
+    let currentMonth = 1;
+    const totalMonths = 9; // Update this based on total months
+
+    const carousels = document.querySelectorAll('.carousel');
+    const images = {};
+
+    carousels.forEach((carousel, index) => {
+      images[index + 1] = carousel.querySelectorAll('img');
+    });
+
+    let currentSlide = {};
+    Object.keys(images).forEach((month) => {
+      currentSlide[month] = 0;
+    });
+
+    function showCarouselMonth(index) {
+      carousels.forEach((carousel, i) => {
+        carousel.style.display = i + 1 === index ? 'block' : 'none';
+      });
+    }
+
+    function changeSlide(month) {
+      images[month].forEach((img, index) => {
+        img.classList.toggle('active', index === currentSlide[month]);
+      });
+    }
+
+    function autoSlide(month) {
+      setInterval(() => {
+        currentSlide[month] = (currentSlide[month] + 1) % images[month].length;
+        changeSlide(month);
+      }, 3000); // Change slide every 3 seconds
+    }
+
+    function prevMonth() {
+      if (currentMonth > 1) {
+        currentMonth--;
+        showCarouselMonth(currentMonth);
+      }
+    }
+
+    function nextMonth() {
+      if (currentMonth < totalMonths) {
+        currentMonth++;
+        showCarouselMonth(currentMonth);
+      }
+    }
+
+    // Initialize
+    showCarouselMonth(currentMonth);
+    Object.keys(images).forEach((month) => autoSlide(month));
+  </script>
+</body>
+</html>
